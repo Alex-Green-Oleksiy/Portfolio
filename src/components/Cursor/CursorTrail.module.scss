@@ -1,0 +1,59 @@
+.canvas {
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  pointer-events: none;
+}
+
+.cross {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  opacity: 0;
+  will-change: transform, opacity;
+
+  span {
+    position: absolute;
+    background: var(--accent);
+    border-radius: 1px;
+    transition:
+      width 0.2s ease,
+      height 0.2s ease,
+      opacity 0.2s ease,
+      background 0.35s ease;
+
+    &:first-child {
+      width: 1px;
+      height: 9px;
+      left: 0;
+      top: 0;
+      transform: translate(-50%, -50%);
+      opacity: 0.85;
+    }
+
+    &:last-child {
+      width: 9px;
+      height: 1px;
+      left: 0;
+      top: 0;
+      transform: translate(-50%, -50%);
+      opacity: 0.85;
+    }
+  }
+
+  &.hover span {
+    &:first-child {
+      height: 13px;
+      opacity: 1;
+    }
+
+    &:last-child {
+      width: 13px;
+      opacity: 1;
+    }
+  }
+}

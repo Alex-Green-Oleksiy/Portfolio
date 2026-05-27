@@ -1,0 +1,26 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
+.toggle {
+  display: grid;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border: 1px solid $border;
+  border-radius: 8px;
+  color: $text-muted;
+  transition: border-color $transition, color $transition, background $transition;
+  @include focus-ring;
+
+  &:hover {
+    color: $accent;
+    border-color: $border-strong;
+    background: $accent-soft;
+  }
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

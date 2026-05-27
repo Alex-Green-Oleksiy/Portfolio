@@ -1,0 +1,42 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+
+  @include respond(md) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card {
+  @include card-surface;
+  padding: 2rem 1.75rem;
+  transition: border-color $transition, transform $transition;
+
+  &:hover {
+    border-color: $border-strong;
+    transform: translateY(-4px);
+  }
+
+  h3 {
+    font-family: $font-display;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1.25rem;
+    color: $accent;
+  }
+
+  li {
+    font-size: 0.9rem;
+    color: $text-muted;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid $border;
+    line-height: 1.45;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}

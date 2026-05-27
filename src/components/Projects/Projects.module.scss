@@ -1,0 +1,275 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
+.layout {
+  display: grid;
+  gap: 2rem;
+
+  @include respond(lg) {
+    grid-template-columns: minmax(240px, 300px) 1fr;
+    gap: 2.5rem;
+    align-items: start;
+  }
+}
+
+.tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+
+  @media (max-width: 1023px) {
+    flex-direction: row;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+  }
+
+  button {
+    position: relative;
+    overflow: hidden;
+    text-align: left;
+    padding: 1.25rem 1.5rem;
+    border: 1px solid $border;
+    border-radius: $radius;
+    background: transparent;
+    transition: border-color $transition, background $transition;
+    @include focus-ring;
+
+    @media (max-width: 1023px) {
+      min-width: 200px;
+      flex-shrink: 0;
+    }
+
+    &:hover {
+      border-color: $border-strong;
+    }
+  }
+}
+
+.tabActive {
+  border-color: $border-strong !important;
+  background: $accent-soft !important;
+}
+
+.tabTag {
+  display: block;
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: $accent;
+  margin-bottom: 0.4rem;
+}
+
+.tabTitle {
+  font-family: $font-display;
+  font-size: clamp(1.05rem, 2vw, 1.2rem);
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.tabIndicator {
+  position: absolute;
+  inset: 0;
+  border: 1px solid $border-strong;
+  border-radius: $radius;
+  background: $accent-soft;
+  z-index: -1;
+}
+
+.detail {
+  @include card-surface;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  @include respond(md) {
+    padding: 2.5rem;
+  }
+
+  h3 {
+    font-family: $font-display;
+    font-size: clamp(1.75rem, 4vw, 2.25rem);
+    font-weight: 500;
+    margin: 0;
+  }
+}
+
+.titleRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 0.5rem 0 1rem;
+}
+
+.liveLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: $accent;
+  padding: 0.5rem 1rem;
+  border: 1px solid $border-strong;
+  border-radius: 8px;
+  transition: background $transition, transform $transition;
+  @include focus-ring;
+
+  &:hover {
+    background: $accent-soft;
+    transform: translateY(-1px);
+  }
+}
+
+.arrow {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.tag {
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: $accent;
+}
+
+.desc {
+  color: $text-muted;
+  font-size: 1rem;
+  line-height: 1.7;
+  max-width: 40rem;
+}
+
+.meta {
+  display: grid;
+  gap: 2rem;
+
+  @include respond(md) {
+    grid-template-columns: 1fr 1.2fr;
+  }
+
+  h4 {
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: $text-dim;
+    margin-bottom: 0.85rem;
+  }
+}
+
+.stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+
+  li {
+    padding: 0.35rem 0.75rem;
+    font-size: 0.8rem;
+    border: 1px solid $border;
+    border-radius: 6px;
+    color: $text-muted;
+  }
+}
+
+.features li {
+  font-size: 0.9rem;
+  color: $text-muted;
+  padding: 0.4rem 0 0.4rem 1rem;
+  position: relative;
+  line-height: 1.5;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.75rem;
+    width: 4px;
+    height: 4px;
+    background: $accent;
+    border-radius: 50%;
+  }
+}
+
+.previewLink {
+  display: block;
+  position: relative;
+  border-radius: $radius;
+  overflow: hidden;
+  border: 1px solid $border;
+  transition: border-color $transition, box-shadow $transition;
+  @include focus-ring;
+
+  &:hover {
+    border-color: $border-strong;
+    box-shadow: 0 16px 48px $shadow-lg;
+
+    .previewCta {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+
+    .visual {
+      opacity: 0.75;
+    }
+  }
+}
+
+.visual {
+  aspect-ratio: 16 / 9;
+  min-height: 220px;
+  transition: opacity $transition;
+
+  @include respond(md) {
+    min-height: 280px;
+  }
+}
+
+.shotWrap {
+  position: absolute;
+  inset: 0;
+
+  picture,
+  img {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+}
+
+.shopShowcase {
+  border: 1px solid $border;
+  border-radius: $radius-lg;
+  overflow: hidden;
+  padding: 1rem;
+  background: $bg-card;
+}
+
+.previewCta {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.96);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  background: $accent;
+  color: $on-accent;
+  border-radius: 10px;
+  opacity: 0;
+  transition: opacity $transition, transform $transition;
+  pointer-events: none;
+  box-shadow: 0 12px 32px $accent-glow;
+
+  @media (hover: none) {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+

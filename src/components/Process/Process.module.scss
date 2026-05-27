@@ -1,0 +1,67 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
+.steps {
+  display: grid;
+  gap: 0;
+
+  @include respond(md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include respond(lg) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  li {
+    padding: 0;
+    border: 1px solid $border;
+    margin: -1px 0 0 -1px;
+    position: relative;
+    transition: background $transition;
+
+    &:hover {
+      background: $accent-soft;
+      z-index: 1;
+    }
+
+    @include respond(lg) {
+      &:first-child {
+        border-radius: $radius-lg 0 0 0;
+      }
+      &:nth-child(4) {
+        border-radius: 0 $radius-lg 0 0;
+      }
+    }
+  }
+
+  h3 {
+    font-family: $font-display;
+    font-size: 1.35rem;
+    font-weight: 500;
+    margin-bottom: 0.65rem;
+    line-height: 1.25;
+  }
+
+  p {
+    font-size: 0.9rem;
+    color: $text-muted;
+    line-height: 1.6;
+  }
+}
+
+.stepInner {
+  padding: 2rem 1.5rem;
+  height: 100%;
+}
+
+.num {
+  display: block;
+  font-family: $font-display;
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: $accent;
+  opacity: 0.5;
+  line-height: 1;
+  margin-bottom: 1rem;
+}

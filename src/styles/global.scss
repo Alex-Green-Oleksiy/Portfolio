@@ -1,0 +1,30 @@
+@use 'reset';
+@use 'themes';
+@use 'variables' as *;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-body;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: $text;
+  background: $bg;
+  overflow-x: hidden;
+  transition:
+    background-color $transition,
+    color $transition;
+}
+
+#root {
+  position: relative;
+  z-index: 1;
+}
+
+::selection {
+  background: $accent-soft;
+  color: $text;
+}

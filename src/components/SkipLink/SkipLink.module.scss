@@ -1,0 +1,23 @@
+@use '@/styles/variables' as *;
+
+.skip {
+  position: fixed;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 10000;
+  padding: 0.6rem 1rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  background: $accent;
+  color: $on-accent;
+  border-radius: 8px;
+  transform: translateY(-150%);
+  transition: transform 0.25s ease;
+
+  &:focus {
+    transform: translateY(0);
+    outline: 2px solid $text;
+    outline-offset: 3px;
+  }
+}

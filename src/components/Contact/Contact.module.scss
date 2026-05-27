@@ -1,0 +1,155 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
+.grid {
+  display: grid;
+  gap: 3rem;
+
+  @include respond(lg) {
+    grid-template-columns: 1fr 1.1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.block h3 {
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: $text-dim;
+  margin-bottom: 0.75rem;
+}
+
+.email {
+  font-family: $font-display;
+  font-size: 1.75rem;
+  font-weight: 500;
+  color: $accent;
+  transition: opacity $transition;
+  @include focus-ring;
+
+  &:hover {
+    opacity: 0.85;
+  }
+}
+
+.cvLink {
+  display: inline-flex;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: $text;
+  padding: 0.65rem 1.1rem;
+  border: 1px solid $border-strong;
+  border-radius: 8px;
+  transition: background $transition, color $transition;
+  @include focus-ring;
+
+  &:hover {
+    background: $accent-soft;
+    color: $accent;
+  }
+}
+
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  a {
+    font-size: 0.9rem;
+    color: $text-muted;
+    padding-bottom: 0.15rem;
+    border-bottom: 1px solid transparent;
+    transition: color $transition, border-color $transition;
+    @include focus-ring;
+
+    &:hover {
+      color: $text;
+      border-color: $accent;
+    }
+  }
+}
+
+.form {
+  @include card-surface;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+
+  label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+    transition: transform $transition;
+
+    span {
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: $text-dim;
+    }
+  }
+
+  input,
+  textarea {
+    font: inherit;
+    color: $text;
+    background: $bg;
+    border: 1px solid $border;
+    border-radius: 8px;
+    padding: 0.85rem 1rem;
+    transition: border-color $transition;
+    resize: vertical;
+
+    &::placeholder {
+      color: $text-dim;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: $border-strong;
+    }
+  }
+}
+
+.submit {
+  align-self: flex-start;
+  padding: 0.9rem 2rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  background: $accent;
+  color: $on-accent;
+  border-radius: 10px;
+  margin-top: 0.5rem;
+  transition: transform $transition, box-shadow $transition;
+  @include focus-ring;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px $accent-glow;
+  }
+}
+
+.labelFocused span {
+  color: $accent;
+}
+
+.labelFocused input,
+.labelFocused textarea {
+  border-color: $border-strong;
+}
+
+.note {
+  font-size: 0.8rem;
+  color: $text-dim;
+  line-height: 1.5;
+}

@@ -1,0 +1,31 @@
+$font-display: 'Cormorant Garamond', Georgia, serif;
+$font-body: 'Outfit', system-ui, sans-serif;
+
+$bg: var(--bg);
+$bg-elevated: var(--bg-elevated);
+$bg-card: var(--bg-card);
+$border: var(--border);
+$border-strong: var(--border-strong);
+
+$text: var(--text);
+$text-muted: var(--text-muted);
+$text-dim: var(--text-dim);
+
+$accent: var(--accent);
+$accent-shimmer-mid: var(--accent-shimmer-mid);
+$accent-soft: var(--accent-soft);
+$accent-glow: var(--accent-glow);
+$on-accent: var(--on-accent);
+
+$header-scrolled: var(--header-scrolled);
+$menu-bg: var(--menu-bg);
+$menu-backdrop: var(--menu-backdrop);
+$shadow-lg: var(--shadow-lg);
+
+$max-width: 1200px;
+$section-pad: clamp(4rem, 10vw, 7rem);
+$radius: 12px;
+$radius-lg: 20px;
+
+$ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+$transition: 0.35s $ease-out;

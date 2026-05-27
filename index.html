@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="uk" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      (function () {
+        var t = localStorage.getItem('portfolio-theme')
+        if (t === 'light' || t === 'dark') {
+          document.documentElement.setAttribute('data-theme', t)
+        } else if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+          document.documentElement.setAttribute('data-theme', 'light')
+        }
+      })()
+    </script>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" sizes="any" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#08080a" />
+    <meta
+      name="description"
+      content="Ольга — frontend / fullstack розробниця. React, продуктові інтерфейси, e-commerce та аналітичні дашборди."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Ольга — Frontend & Fullstack Developer" />
+    <meta
+      property="og:description"
+      content="Ольга — frontend / fullstack розробниця. React, продуктові інтерфейси, e-commerce та аналітичні дашборди."
+    />
+    <meta property="og:image" content="/og/og-image.png" />
+    <meta property="og:locale" content="uk_UA" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Ольга — Frontend & Fullstack Developer</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

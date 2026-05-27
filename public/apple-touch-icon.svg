@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" fill="none" role="img" aria-label="Olga">
+  <rect width="180" height="180" rx="40" fill="#08080a"/>
+  <rect x="7" y="7" width="166" height="166" rx="34" stroke="#c4a574" stroke-opacity="0.38" stroke-width="3"/>
+  <path
+    fill="url(#g)"
+    d="M90 40c-25.6 0-43.6 18.8-43.6 50s18 50 43.6 50 43.6-18.8 43.6-50-18-50-43.6-50zm0 13.2c16 0 27.2 13.8 27.2 36.8s-11.2 36.8-27.2 36.8-27.2-13.8-27.2-36.8 11.2-36.8 27.2-36.8z"
+  />
+  <defs>
+    <linearGradient id="g" x1="39" y1="34" x2="146" y2="152" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#c4a574"/>
+      <stop offset="1" stop-color="#e2cfa0"/>
+    </linearGradient>
+  </defs>
+</svg>

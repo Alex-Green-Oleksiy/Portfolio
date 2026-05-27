@@ -1,0 +1,46 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
+.section {
+  padding: $section-pad 0;
+  position: relative;
+  transition: background-color $transition, border-color $transition;
+
+  &.alt {
+    background: $bg-elevated;
+    border-block: 1px solid $border;
+  }
+}
+
+.inner {
+  @include container;
+}
+
+.label {
+  @include section-label;
+}
+
+.title {
+  font-family: $font-display;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: 1.05rem;
+  color: $text-muted;
+  max-width: 32rem;
+  margin-bottom: 3rem;
+  line-height: 1.65;
+}
+
+.body {
+  margin-top: 2rem;
+}
+
+.section:has(.subtitle) .body {
+  margin-top: 0;
+}
