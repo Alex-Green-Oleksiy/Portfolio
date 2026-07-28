@@ -1,4 +1,5 @@
 export const PROJECT_LINKS = {
+  chaslo: 'https://chaslo.app/',
   shop: 'https://humble-communication-production.up.railway.app/',
   dashboard: 'https://dashboard.mailys.app/dashboard',
   mailysLanding: 'https://mailys-production.up.railway.app/',
@@ -7,6 +8,7 @@ export const PROJECT_LINKS = {
 }
 
 export const PROJECT_PREVIEWS = {
+  chaslo: '/projects/chaslo.png',
   shop: '/projects/lgrand/home.png',
   dashboard: '/projects/mailys.png',
   mailysLanding: '/projects/mailys-landing.png',

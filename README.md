@@ -17,6 +17,7 @@ npm run dev
 
 | Проєкт | URL |
 |--------|-----|
+| Chaslo | https://chaslo.app/ |
 | L-Grand | https://humble-communication-production.up.railway.app/ |
 | Mailys Dashboard | https://dashboard.mailys.app/dashboard |
 | Mailys (лендінг) | https://mailys-production.up.railway.app/ |

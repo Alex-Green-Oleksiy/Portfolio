@@ -30,9 +30,9 @@ export const translations = {
       ctaSecondary: 'Переглянути роботи',
       downloadCv: 'Завантажити CV',
       stats: [
-        { value: '5+', label: 'production-проєктів' },
-        { value: 'FSD', label: 'архітектура в дашбордах' },
-        { value: 'Full', label: 'stack: UI + API' },
+        { value: '6+', label: 'production-проєктів' },
+        { value: 'SaaS', label: 'CRM · e-commerce · analytics' },
+        { value: 'Full', label: 'stack: UI + API + mobile' },
       ],
     },
     about: {
@@ -40,7 +40,7 @@ export const translations = {
       title: 'Ольга',
       lead: 'Frontend-розробниця з fullstack-практикою. Фокус — продуктові веб-додатки, де важливі швидкість, надійність і бізнес-результат.',
       p1: 'Проєктую та реалізую інтерфейси від landing до складних адмін-панелей. Працюю з React-екосистемою, інтегрую API, real-time та аналітику без компромісів щодо якості коду.',
-      p2: 'У портфоліо — e-commerce, SaaS-аналітика, медична EMR, Kanban-планувальник і продуктові лендінги. Усі з живими демо на Railway та продуманою архітектурою.',
+      p2: 'У портфоліо — Chaslo CRM для салонів, e-commerce, SaaS-аналітика, EMR, Kanban і продуктові лендінги. Усі з живими демо та production-деплоєм.',
       highlights: [
         'React 18, Vite, модульна архітектура (FSD)',
         'Node.js, Express, MongoDB, JWT, Socket.IO',
@@ -85,7 +85,7 @@ export const translations = {
       label: 'Проєкти',
       title: 'Реальні продукти',
       subtitle:
-        'П’ять production-проєктів — від e-commerce і SaaS-дашбордів до EMR, Kanban і продуктового лендінгу.',
+        'Шість production-проєктів — від CRM для салонів і e-commerce до SaaS-дашбордів, EMR та Kanban.',
       liveDemo: 'Живе демо',
       galleryLabel: 'Скріни L-Grand',
       gallery: {
@@ -98,6 +98,20 @@ export const translations = {
         banners: 'Адмін · банери',
       },
       projects: [
+        {
+          id: 'chaslo',
+          tag: 'SaaS · CRM · Beauty',
+          title: 'Chaslo',
+          description:
+            'Production CRM для салонів краси та барбершопів (chaslo.app): онлайн-запис 24/7, календар, клієнти, нагадування Telegram/SMS/email, аналітика, маркетплейс і білінг Monobank. Monorepo: Next.js + backend API + Expo mobile.',
+          stack: ['Next.js 16', 'Prisma', 'PostgreSQL', 'Redis', 'Expo'],
+          features: [
+            'Онлайн-запис, календар drag-and-drop, RBAC',
+            'Нагадування Telegram · SMS · email',
+            'Маркетплейс салонів · підписки Monobank (UAH)',
+            'Expo mobile · Vitest · Playwright E2E',
+          ],
+        },
         {
           id: 'shop',
           tag: 'E-commerce · Fullstack',
@@ -249,9 +263,9 @@ export const translations = {
       ctaSecondary: 'View work',
       downloadCv: 'Download CV',
       stats: [
-        { value: '5+', label: 'production projects' },
-        { value: 'FSD', label: 'dashboard architecture' },
-        { value: 'Full', label: 'stack: UI + API' },
+        { value: '6+', label: 'production projects' },
+        { value: 'SaaS', label: 'CRM · e-commerce · analytics' },
+        { value: 'Full', label: 'stack: UI + API + mobile' },
       ],
     },
     about: {
@@ -259,7 +273,7 @@ export const translations = {
       title: 'Olga',
       lead: 'Frontend developer with fullstack practice. Focus: product web apps where speed, reliability, and business outcomes matter.',
       p1: 'I design and ship interfaces from landing pages to complex admin panels. React ecosystem, API integration, real-time features, and analytics — without compromising code quality.',
-      p2: 'Portfolio spans e-commerce, SaaS analytics, medical EMR, a Kanban planner, and product landings — all with live Railway demos and thoughtful architecture.',
+      p2: 'Portfolio spans Chaslo salon CRM, e-commerce, SaaS analytics, EMR, Kanban, and product landings — all with live demos and production deploys.',
       highlights: [
         'React 18, Vite, modular architecture (FSD)',
         'Node.js, Express, MongoDB, JWT, Socket.IO',
@@ -304,7 +318,7 @@ export const translations = {
       label: 'Work',
       title: 'Real products',
       subtitle:
-        'Five production projects — from e-commerce and SaaS dashboards to EMR, Kanban, and product landings.',
+        'Six production projects — from salon CRM and e-commerce to SaaS dashboards, EMR, and Kanban.',
       liveDemo: 'Live demo',
       galleryLabel: 'L-Grand screens',
       gallery: {
@@ -317,6 +331,20 @@ export const translations = {
         banners: 'Admin · banners',
       },
       projects: [
+        {
+          id: 'chaslo',
+          tag: 'SaaS · CRM · Beauty',
+          title: 'Chaslo',
+          description:
+            'Production CRM for beauty salons and barbershops (chaslo.app): 24/7 online booking, calendar, clients, Telegram/SMS/email reminders, analytics, marketplace, and Monobank billing. Monorepo: Next.js + backend API + Expo mobile.',
+          stack: ['Next.js 16', 'Prisma', 'PostgreSQL', 'Redis', 'Expo'],
+          features: [
+            'Online booking, drag-and-drop calendar, RBAC',
+            'Telegram · SMS · email reminders',
+            'Salon marketplace · Monobank subscriptions (UAH)',
+            'Expo mobile · Vitest · Playwright E2E',
+          ],
+        },
         {
           id: 'shop',
           tag: 'E-commerce · Fullstack',
