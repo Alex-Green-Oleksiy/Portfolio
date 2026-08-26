@@ -216,16 +216,8 @@ export const translations = {
       title: 'Готова до нового проєкту',
       subtitle:
         'Шукаю роль frontend / fullstack або співпрацю над продуктом. Напишіть — відповім протягом доби.',
-      email: 'Email',
-      social: 'Соцмережі',
-      downloadCv: 'Завантажити CV (PDF)',
-      form: {
-        name: "Ваше ім'я",
-        email: 'Email',
-        message: 'Коротко про задачу',
-        send: 'Надіслати',
-        note: 'Або напишіть напряму на email — форма відкриє поштовий клієнт.',
-      },
+      phone: 'Телефон',
+      telegram: 'Telegram',
     },
     footer: {
       rights: 'Усі права захищені.',
@@ -449,16 +441,8 @@ export const translations = {
       title: 'Open to new projects',
       subtitle:
         'Looking for a frontend / fullstack role or product collaboration. Message me — I reply within a day.',
-      email: 'Email',
-      social: 'Social',
-      downloadCv: 'Download CV (PDF)',
-      form: {
-        name: 'Your name',
-        email: 'Email',
-        message: 'Brief about the task',
-        send: 'Send',
-        note: 'Or email directly — the form opens your mail client.',
-      },
+      phone: 'Phone',
+      telegram: 'Telegram',
     },
     footer: {
       rights: 'All rights reserved.',
