@@ -4,15 +4,15 @@
 .toggle {
   display: grid;
   place-items: center;
-  width: 2.25rem;
-  height: 2.25rem;
+  width: 2.75rem;
+  height: 2.75rem;
   border: 1px solid $border;
   border-radius: 8px;
   color: $text-muted;
   transition: border-color $transition, color $transition, background $transition;
   @include focus-ring;
 
-  &:hover {
+  @include hover {
     color: $accent;
     border-color: $border-strong;
     background: $accent-soft;

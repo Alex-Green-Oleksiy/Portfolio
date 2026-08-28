@@ -1,8 +1,11 @@
 @use 'variables' as *;
 
 @mixin container {
-  width: min(100% - 2.5rem, $max-width);
+  width: 100%;
+  max-width: $max-width;
   margin-inline: auto;
+  padding-inline: max($gutter, env(safe-area-inset-left, 0px))
+    max($gutter, env(safe-area-inset-right, 0px));
 }
 
 @mixin section-label {
@@ -39,6 +42,18 @@
     }
   } @else if $bp == lg {
     @media (min-width: 1024px) {
+      @content;
+    }
+  } @else if $bp == xl {
+    @media (min-width: 1280px) {
+      @content;
+    }
+  }
+}
+
+@mixin hover {
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
       @content;
     }
   }

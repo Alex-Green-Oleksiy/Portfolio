@@ -4,7 +4,15 @@
 .info {
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  gap: 1.75rem;
+  width: 100%;
+  min-width: 0;
+
+  @include respond(md) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem 4rem;
+  }
 }
 
 .block h3 {
@@ -17,13 +25,17 @@
 
 .link {
   font-family: $font-display;
-  font-size: clamp(1.5rem, 3vw, 1.75rem);
+  font-size: clamp(1.35rem, 5vw, 1.75rem);
   font-weight: 500;
   color: $accent;
+  display: inline-flex;
+  min-height: 2.5rem;
+  align-items: center;
+  overflow-wrap: anywhere;
   transition: opacity $transition;
   @include focus-ring;
 
-  &:hover {
+  @include hover {
     opacity: 0.85;
   }
 }

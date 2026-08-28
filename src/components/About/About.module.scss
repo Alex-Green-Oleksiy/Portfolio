@@ -3,7 +3,7 @@
 
 .grid {
   display: grid;
-  gap: 3rem;
+  gap: 2rem;
 
   @include respond(lg) {
     grid-template-columns: 1.2fr 0.8fr;
@@ -19,23 +19,27 @@
 
   p {
     color: $text-muted;
-    font-size: 1.05rem;
+    font-size: clamp(0.95rem, 2.4vw, 1.05rem);
     line-height: 1.75;
   }
 }
 
 .lead {
-  font-size: 1.2rem !important;
+  font-size: clamp(1.05rem, 3vw, 1.2rem) !important;
   color: $text !important;
   font-weight: 400;
 }
 
 .highlights {
   @include card-surface;
-  padding: 2rem;
+  padding: 1.35rem 1.25rem;
   display: flex;
   flex-direction: column;
   gap: 1.15rem;
+
+  @include respond(sm) {
+    padding: 2rem;
+  }
 
   li {
     display: flex;

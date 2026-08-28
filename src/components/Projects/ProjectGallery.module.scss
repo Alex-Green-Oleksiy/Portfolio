@@ -48,12 +48,18 @@
 }
 
 .thumbs {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  display: flex;
   gap: 0.4rem;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scrollbar-width: thin;
+  padding-bottom: 0.15rem;
 
-  @media (max-width: 768px) {
-    grid-template-columns: repeat(4, 1fr);
+  @include respond(md) {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    overflow: visible;
+    padding-bottom: 0;
   }
 
   button {
@@ -61,11 +67,16 @@
     border: 2px solid transparent;
     border-radius: 6px;
     overflow: hidden;
+    flex: 0 0 4.75rem;
     aspect-ratio: 16 / 10;
     transition: border-color $transition, opacity $transition;
     @include focus-ring;
 
-    &:hover {
+    @include respond(md) {
+      flex: none;
+    }
+
+    @include hover {
       opacity: 0.9;
     }
   }
