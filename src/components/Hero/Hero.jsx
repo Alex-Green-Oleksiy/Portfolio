@@ -1,6 +1,5 @@
 import { motion, useReducedMotion } from 'framer-motion'
 import { useLanguage } from '@/context/LanguageContext'
-import { SITE } from '@/config/site'
 import MacBookCode from '@/components/MacBookCode/MacBookCode'
 import { EASE, fadeUp, heroStagger } from '@/motion/config'
 import styles from './Hero.module.scss'
@@ -26,9 +25,6 @@ function HeroContent({ t, reduce, motionProps = {} }) {
             </a>
             <a href="#work" className={styles.secondary}>
               {t.hero.ctaSecondary}
-            </a>
-            <a href={SITE.cvUrl} className={styles.cv} download>
-              {t.hero.downloadCv}
             </a>
           </div>
         </>
@@ -66,16 +62,6 @@ function HeroContent({ t, reduce, motionProps = {} }) {
               transition={{ duration: 0.2, ease: EASE }}
             >
               {t.hero.ctaSecondary}
-            </motion.a>
-            <motion.a
-              href={SITE.cvUrl}
-              className={styles.cv}
-              download
-              whileHover={{ y: -2 }}
-              whileTap={{ scale: 0.98 }}
-              transition={{ duration: 0.2, ease: EASE }}
-            >
-              {t.hero.downloadCv}
             </motion.a>
           </motion.div>
         </>

@@ -35,9 +35,8 @@ npx playwright screenshot --viewport-size=1400,788 --wait-for-timeout=5000 \
 ## Перед публікацією
 
 1. `src/config/site.js` — email, GitHub, LinkedIn, Telegram, `siteUrl` (для OG)
-2. `public/cv.pdf` — покладіть свій CV (кнопки «Завантажити CV»)
-3. Скріни L-Grand: `public/projects/lgrand/` (7 PNG)
-4. Опційно: `npx cwebp` для `.webp` — швидше завантаження
+2. Скріни L-Grand: `public/projects/lgrand/` (7 PNG)
+3. Опційно: `npx cwebp` для `.webp` — швидше завантаження
 
 ## Збірка
 

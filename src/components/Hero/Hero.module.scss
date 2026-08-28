@@ -184,45 +184,6 @@
   }
 }
 
-.cv {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.85rem 1.25rem;
-  min-height: 2.75rem;
-  width: 100%;
-  font-size: 0.8rem;
-  font-weight: 500;
-  letter-spacing: 0.04em;
-  color: $text-muted;
-  border: 1px solid $border;
-  border-radius: 10px;
-  transition: color $transition, border-color $transition, background $transition;
-  @include focus-ring;
-
-  @include respond(sm) {
-    width: auto;
-    border: none;
-    border-radius: 0;
-    border-bottom: 1px solid transparent;
-    padding: 0.9rem 1.25rem;
-  }
-
-  @include hover {
-    color: $accent;
-    border-color: $border-strong;
-    background: $accent-soft;
-  }
-
-  @include respond(sm) {
-    @include hover {
-      background: transparent;
-      border-color: transparent;
-      border-bottom-color: $accent;
-    }
-  }
-}
-
 .stats {
   display: grid;
   grid-template-columns: 1fr;

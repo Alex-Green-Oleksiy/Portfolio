@@ -28,7 +28,6 @@ export const translations = {
       availability: 'Відкрита до full-time / contract · Remote',
       ctaPrimary: 'Обговорити проєкт',
       ctaSecondary: 'Переглянути роботи',
-      downloadCv: 'Завантажити CV',
       stats: [
         { value: '6+', label: 'production-проєктів' },
         { value: 'SaaS', label: 'CRM · e-commerce · analytics' },
@@ -253,7 +252,6 @@ export const translations = {
       availability: 'Open to full-time / contract · Remote',
       ctaPrimary: 'Discuss a project',
       ctaSecondary: 'View work',
-      downloadCv: 'Download CV',
       stats: [
         { value: '6+', label: 'production projects' },
         { value: 'SaaS', label: 'CRM · e-commerce · analytics' },
